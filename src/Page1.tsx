@@ -1,6 +1,24 @@
+import { useEffect, useState } from 'react';
+
 import style1 from './styles/page1.module.css';
 
 function App() {
+  const [scrollBG, setScrollBG] = useState('rgba(255,255,255,0)');
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrollBG('rgba(40, 58, 90, 0.9)');
+      } else {
+        setScrollBG('rgba(255, 255, 255, 0)');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <header>
@@ -41,7 +59,13 @@ function App() {
             </a>
           </div>
         </div>
-        <div className={style1.navBar_bottom}>
+        <div
+          className={style1.navBar_bottom}
+          style={{
+            backgroundColor: scrollBG,
+            transition: 'background-color 0.3s ease-in-out',
+          }}
+        >
           <div className={style1.navBar_bottom_container}>
             <span className={style1.navBar_bottom_left}>ARSHA</span>
             <div className={style1.navBar_bottom_right}>
@@ -73,14 +97,20 @@ function App() {
             </p>
             <div className={style1.page1_left_btns}>
               <a className={style1.page1_left_firstBtn}>Get Started</a>
-              <a className={style1.page1_left_secondBtn}>
+              <a
+                href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                className={style1.page1_left_secondBtn}
+              >
                 <img src="/icons/play-circle.svg" />
                 <span>Watch Video</span>
               </a>
             </div>
           </div>
           <div className={style1.page1_right_container}>
-            <img src="/img/hero-img.png" />
+            <img
+              src="/img/hero-img.png"
+              className={style1.animated}
+            />
           </div>
         </div>
       </div>

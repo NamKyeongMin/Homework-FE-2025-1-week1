@@ -122,6 +122,10 @@
   justify-content: center;
   border: 2px solid var(--accent-color);
 }
+.page2_aboutUs_readBtn:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
 .page2_aboutUs_readBtn > img {
   margin-left: 5px;
 }

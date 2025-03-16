@@ -21,6 +21,9 @@ header {
   align-items: center;
   flex-direction: column;
 }
+a {
+  cursor: pointer;
+}
 .navBar_container {
   display: flex;
   justify-content: space-between;
@@ -112,6 +115,7 @@ header {
   letter-spacing: 2px;
   font-family: var(--heading-font);
   margin-right: auto;
+  cursor: pointer;
 }
 .navBar_bottom_right {
   display: flex;
@@ -215,6 +219,11 @@ header {
   padding: 10px 28px 12px 28px;
   border-radius: 50px;
   transition: 0.5s;
+  cursor: pointer;
+}
+.page1_left_firstBtn:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 .page1_left_secondBtn {
   font-size: 16px;
@@ -226,6 +235,10 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+.page1_left_secondBtn:hover {
+  color: var(--accent-color);
 }
 .page1_left_secondBtn > img {
   transition: 0.3s;
@@ -256,114 +269,15 @@ header {
 .page1_company_bar > img {
   height: 100%;
 }
-.page1_aboutUs_top {
-  height: fit-content;
-  padding-block: 60px;
-  width: 100%;
+@keyframes up-down {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
-.page1_aboutUs_container {
-  display: flex;
-  padding: 0px 12px 60px 12px;
-  margin-inline: 57px;
-  justify-content: center;
-}
-.page1_aboutUs_title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-  position: relative;
-}
-.page1_aboutUs_title::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 160px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 60%);
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  margin: auto;
-}
-.page1_aboutUs_title::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--accent-color);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-.page1_aboutUs_outline {
-  height: 209px;
-  margin-inline: 57px;
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  width: 89%;
-  max-width: 1350px;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-}
-.page1_aboutUs_inline {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-}
-.page1_aboutUs_left,
-.page1_aboutUs_right {
-  padding-inline: 12px;
-  margin-top: 24px;
-}
-.page1_aboutUs_left_title,
-.page1_aboutUs_right_info {
-  margin-bottom: 1rem;
-  font-family: var(--default-font);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-}
-.page1_aboutUs_left_lists {
-  display: flex;
-  flex-direction: column;
-}
-.page1_aboutUs_left_list > p {
-  font-family: var(--default-font);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-}
-.page1_aboutUs_readBtn {
-  color: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  padding: 8px 28px;
-  border-radius: 5px;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--accent-color);
-}
-.page1_aboutUs_readBtn > img {
-  margin-left: 5px;
-  padding-right:;
-}
-.page1_aboutUs_left_list {
-  display: flex;
-}
-.page1_aboutUs_left_list > img {
-  padding-bottom: 5px;
-  display: flex;
-  align-items: center;
-  padding-right: 4px;
+
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
