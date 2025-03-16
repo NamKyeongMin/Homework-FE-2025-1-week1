@@ -5,6 +5,8 @@ import Page1 from './Page1.tsx';
 import Page2 from './Page2.tsx';
 import Page3 from './Page3.tsx';
 import Page4 from './Page4.tsx';
+import Page5 from './Page5.tsx';
+import Page6 from './Page6.tsx';
 
 const ResetStyle = createGlobalStyle`
   * {
@@ -241,5 +243,7 @@ createRoot(document.getElementById('root')!).render(
     <Page2 />
     <Page3 />
     <Page4 />
+    <Page5 />
+    <Page6 />
   </>
 );
