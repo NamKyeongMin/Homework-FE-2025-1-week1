@@ -17,6 +17,13 @@ function App() {
       }
     };
 
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setTransX((prev) => {
         if (prev <= -slideWidth * 6) {
@@ -31,11 +38,6 @@ function App() {
       });
     }, 3000);
     return () => clearInterval(interval);
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, []);
 
   useEffect(() => {
@@ -151,7 +153,7 @@ function App() {
               transition: isTrans ? 'transform 0.5s ease-in-out' : 'none',
             }}
           >
-            {[...Array(2)].flatMap((_, i) => [
+            {[...Array<number>(2)].flatMap((_, i) => [
               <div
                 key={`b1-${i}`}
                 className={style1.page1_company_img}
