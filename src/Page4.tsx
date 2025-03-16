@@ -6,7 +6,7 @@ function App() {
       <section className={style4.page4_aboutUs_bottom}>
         <div className={style4.page4_bottom_inner}>
           <div className={style4.page4_bottom_left}>
-            <img src="../src/assets/img/illustration-10.webp" />
+            <img src="/img/illustration-10.webp" />
           </div>
           <div className={style4.page4_bottom_right}>
             <h3 className={style4.page4_bottom_right_title}>

@@ -16,19 +16,19 @@ function App() {
               </p>
               <div className={style2.page2_aboutUs_left_lists}>
                 <div className={style2.page2_aboutUs_left_list}>
-                  <img src="../src/assets/check2-circle.svg" />
+                  <img src="/icons/check2-circle.svg" />
                   <p>
                     Ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                 </div>
                 <div className={style2.page2_aboutUs_left_list}>
-                  <img src="../src/assets/check2-circle.svg" />
+                  <img src="/icons/check2-circle.svg" />
                   <p>
                     Duis aute irure dolor in reprehenderit in voluptate velit.
                   </p>
                 </div>
                 <div className={style2.page2_aboutUs_left_list}>
-                  <img src="../src/assets/check2-circle.svg" />
+                  <img src="/icons/check2-circle.svg" />
                   <p>Ullamco laboris nisi ut aliquip ex ea commodo</p>
                 </div>
               </div>
@@ -43,7 +43,7 @@ function App() {
               </p>
               <a className={style2.page2_aboutUs_readBtn}>
                 <span>Read More</span>
-                <img src="../src/assets/arrow-right.svg" />
+                <img src="/icons/arrow-right.svg" />
               </a>
             </div>
           </div>

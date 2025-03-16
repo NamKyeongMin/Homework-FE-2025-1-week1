@@ -24,7 +24,7 @@ function App() {
                   Non consectetur a erat nam at lectus urna duis?
                 </div>
                 <div className={style3.page3_left_list1_toggle}>
-                  <img src="../src/assets/chevron-right.svg" />
+                  <img src="/icons/chevron-right.svg" />
                 </div>
               </div>
               <div className={style3.page3_left_list}>
@@ -34,7 +34,7 @@ function App() {
                   pellentesque?
                 </div>
                 <div className={style3.page3_left_list2_toggle}>
-                  <img src="../src/assets/chevron-right.svg" />
+                  <img src="/icons/chevron-right.svg" />
                 </div>
               </div>
               <div className={style3.page3_left_list}>
@@ -43,13 +43,13 @@ function App() {
                   Dolor sit amet consectetur adipiscing elit pellentesque?
                 </div>
                 <div className={style3.page3_left_list3_toggle}>
-                  <img src="../src/assets/chevron-right.svg" />
+                  <img src="/icons/chevron-right.svg" />
                 </div>
               </div>
             </div>
           </div>
           <div className={style3.page3_aboutUs_right}>
-            <img src="../src/assets/img/why-us.png" />
+            <img src="/img/why-us.png" />
           </div>
         </div>
       </section>

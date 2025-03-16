@@ -8,35 +8,35 @@ function App() {
           <div className={style1.logo_container}>
             <img
               className={style1.navBar_top_logo}
-              src="../src/assets/logo.png"
+              src="/img/logo.png"
             />
             <div className={style1.preview_container}>
               <div className={style1.preview_computer}>
-                <img src="../src/assets/computer.svg" />
+                <img src="/icons/computer.svg" />
               </div>
               <div className={style1.preview_tablet}>
-                <img src="../src/assets/tablet.svg" />
+                <img src="/icons/tablet.svg" />
               </div>
               <div className={style1.preview_phone}>
-                <img src="../src/assets/phone.svg" />
+                <img src="/icons/phone.svg" />
               </div>
             </div>
           </div>
           <div className={style1.navBar_top_mid_container}>
             <a className={style1.navBar_top_mid_img}>
-              <img src="../src/assets/chevron-left.svg" />
+              <img src="/icons/chevron-left.svg" />
             </a>
             <a className={style1.navBar_top_mid}>Arsha</a>
             <a className={style1.navBar_top_mid_img}>
-              <img src="../src/assets/chevron-right.svg" />
+              <img src="/icons/chevron-right.svg" />
             </a>
           </div>
           <div className={style1.navBar_top_right_container}>
             <a>
-              <img src="../src/assets/box-arrow-up-right.svg" />
+              <img src="/icons/box-arrow-up-right.svg" />
             </a>
             <a className={style1.download_btn_container}>
-              <img src="../src/assets/download.svg" />
+              <img src="/icons/download.svg" />
               <span>DOWNLOAD</span>
             </a>
           </div>
@@ -54,7 +54,7 @@ function App() {
               <a className={style1.categori}>Blog</a>
               <a className={style1.categori}>
                 <span>Dropdown</span>
-                <img src="../src/assets/chevron-down.svg" />
+                <img src="/icons/chevron-down.svg" />
               </a>
               <a className={style1.categori}>Contact</a>
               <a className={style1.categori_btn}>Get Started</a>
@@ -74,25 +74,25 @@ function App() {
             <div className={style1.page1_left_btns}>
               <a className={style1.page1_left_firstBtn}>Get Started</a>
               <a className={style1.page1_left_secondBtn}>
-                <img src="../src/assets/play-circle.svg" />
+                <img src="/icons/play-circle.svg" />
                 <span>Watch Video</span>
               </a>
             </div>
           </div>
           <div className={style1.page1_right_container}>
-            <img src="../src/assets/hero-img.png" />
+            <img src="/img/hero-img.png" />
           </div>
         </div>
       </div>
       <section className={style1.page1_bottom_bar}>
         <div className={style1.page1_company_container}>
           <div className={style1.page1_company_bar}>
-            <img src="../src/assets/img/banner1.png" />
-            <img src="../src/assets/img/banner2.png" />
-            <img src="../src/assets/img/banner3.png" />
-            <img src="../src/assets/img/banner4.png" />
-            <img src="../src/assets/img/banner5.png" />
-            <img src="../src/assets/img/banner6.png" />
+            <img src="/img/banner1.png" />
+            <img src="/img/banner2.png" />
+            <img src="/img/banner3.png" />
+            <img src="/img/banner4.png" />
+            <img src="/img/banner5.png" />
+            <img src="/img/banner6.png" />
           </div>
         </div>
       </section>
