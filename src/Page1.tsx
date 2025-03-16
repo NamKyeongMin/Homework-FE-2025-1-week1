@@ -3,7 +3,11 @@ import { useEffect, useState } from 'react';
 import style1 from './styles/page1.module.css';
 
 function App() {
+  const slideWidth = 128;
   const [scrollBG, setScrollBG] = useState('rgba(255,255,255,0)');
+  const [transX, setTransX] = useState(0);
+  const [isTrans, setIsTrans] = useState(true);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -13,11 +17,35 @@ function App() {
       }
     };
 
+    const interval = setInterval(() => {
+      setTransX((prev) => {
+        if (prev <= -slideWidth * 6) {
+          setTimeout(() => {
+            setIsTrans(false);
+            setTransX(0);
+          }, 500);
+          return prev;
+        }
+        setIsTrans(true);
+        return prev - slideWidth;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (transX <= -412 * 6) {
+      setTimeout(() => {
+        setTransX(0);
+        setIsTrans(false);
+      }, 500);
+    }
+  }, [transX]);
 
   return (
     <>
@@ -116,13 +144,51 @@ function App() {
       </div>
       <section className={style1.page1_bottom_bar}>
         <div className={style1.page1_company_container}>
-          <div className={style1.page1_company_bar}>
-            <img src="/img/banner1.png" />
-            <img src="/img/banner2.png" />
-            <img src="/img/banner3.png" />
-            <img src="/img/banner4.png" />
-            <img src="/img/banner5.png" />
-            <img src="/img/banner6.png" />
+          <div
+            className={style1.page1_company_bar}
+            style={{
+              transform: `translate3d(${transX}px, 0, 0)`,
+              transition: isTrans ? 'transform 0.5s ease-in-out' : 'none',
+            }}
+          >
+            {[...Array(2)].flatMap((_, i) => [
+              <div
+                key={`b1-${i}`}
+                className={style1.page1_company_img}
+              >
+                <img src="/img/banner1.png" />
+              </div>,
+              <div
+                key={`b2-${i}`}
+                className={style1.page1_company_img}
+              >
+                <img src="/img/banner2.png" />
+              </div>,
+              <div
+                key={`b3-${i}`}
+                className={style1.page1_company_img}
+              >
+                <img src="/img/banner3.png" />
+              </div>,
+              <div
+                key={`b4-${i}`}
+                className={style1.page1_company_img}
+              >
+                <img src="/img/banner4.png" />
+              </div>,
+              <div
+                key={`b5-${i}`}
+                className={style1.page1_company_img}
+              >
+                <img src="/img/banner5.png" />
+              </div>,
+              <div
+                key={`b6-${i}`}
+                className={style1.page1_company_img}
+              >
+                <img src="/img/banner6.png" />
+              </div>,
+            ])}
           </div>
         </div>
       </section>
