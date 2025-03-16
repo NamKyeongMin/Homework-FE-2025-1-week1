@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --default-font:
+    'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --heading-font: 'Jost', sans-serif;
+  --nav-font: 'Poppins', sans-serif;
+}
+.page4_aboutUs_bottom {
+  height: 480px;
+  padding-block: 60px;
+  width: 100%;
+}
+.page4_bottom_inner {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 89%;
+  max-width: 1350px;
+  height: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.page4_bottom_left,
+.page4_bottom_right {
+  padding-inline: 12px;
+}
+.page4_bottom_left {
+  max-width: 700px;
+}
+.page4_bottom_left > img {
+  width: 100%;
+}
+.page4_bottom_right {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+.page4_bottom_right_title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.page4_bottom_right > p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: var(--default-font);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+}
+.page4_right_skills {
+  display: flex;
+  flex-direction: column;
+}
+.page4_right_skill {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+}
+.page4_right_skill_info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--default-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  font-size: 0.75rem;
+}
+.page4_right_skill_progress {
+  background: color-mix(in srgb, var(--heading-color), transparent 90%);
+  height: 10px;
+}
+.page4_progressBar,
+.page4_progressBar_90,
+.page4_progressBar_75,
+.page4_progressBar_55 {
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--heading-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--bs-progress-bar-color);
+  text-align: center;
+  white-space: nowrap;
+}
+.page4_progressBar_90 {
+  width: 90%;
+}
+.page4_progressBar_75 {
+  width: 75%;
+}
+.page4_progressBar_55 {
+  width: 55%;
+}
